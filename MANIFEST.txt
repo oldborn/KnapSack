@@ -1,0 +1,12 @@
+[main]
+
+problem = ks
+
+files =
+    main.py
+    REPORT.txt
+
+build =
+
+run =
+    python solver.py %%f

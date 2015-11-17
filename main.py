@@ -1,5 +1,6 @@
 import read
 import solve
 
-(capacity, items) = read.read_problem("data/ks_500_0")
-solve.solve_dp(capacity, items)
+(capacity, items) = read.read_problem("data/ks_10000_0")
+solution = solve.solve_dp(capacity, items)
+print(solution)
