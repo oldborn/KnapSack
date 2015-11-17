@@ -1,7 +1,6 @@
 def knapsack_dynamic_programming_solver(capacity, items):
-    # memoization_matrix = [[0 for x in range(items.__len__())] for x in range(capacity)]
-    matrix = []
-    matrix.append([0 for x in range(capacity + 1)])
+    # memorization_matrix = [[0 for x in range(items.__len__())] for x in range(capacity)]
+    matrix = [[0 for x in range(capacity + 1)]]
     for i in range(1, items.__len__()+1):
         matrix.append([0] + [-1 for x in range(1, capacity + 1)])
     for i in range(1, items.__len__()+1):
@@ -13,4 +12,16 @@ def knapsack_dynamic_programming_solver(capacity, items):
                     matrix[i][w] = matrix[i - 1][w]
             else:
                 matrix[i][w] = matrix[i - 1][w]
-    return matrix[items.__len__()][capacity]
+
+    # get solution
+
+    i = items.__len__() - 1
+    k = capacity
+    taken = [0 for i in range(items.__len__())]
+    while i >= 0 and k > 0:
+        if matrix[i + 1][k] != matrix[i][k]:
+            taken[i] = 1
+            k = k - items[i][1]
+        i -= 1
+
+    return matrix[items.__len__()][capacity], taken

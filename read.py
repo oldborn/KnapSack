@@ -17,6 +17,5 @@ def read_problem(file_name):
 
     # or:
     # n_items, capacity = map(int, lines[0].split())
-    # items = [tuple(map(int, line.split())) for line in lines[1 : n_items+1]]
     # print(items)
     return (capacity, items)

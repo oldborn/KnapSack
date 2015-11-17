@@ -9,4 +9,4 @@ files =
 build =
 
 run =
-    python solver.py %%f
+    python main.py %%f
