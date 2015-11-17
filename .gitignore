@@ -16,3 +16,17 @@ __pycache__/solve.cpython-35.pyc
 .idea/modules.xml
 
 .idea/workspace.xml
+
+__pycache__/knapsack_solver_DP.cpython-34.pyc
+
+__pycache__/read.cpython-34.pyc
+
+__pycache__/solve.cpython-34.pyc
+
+.idea/vcs.xml
+
+knapsack_solver_DP.pyc
+
+read.pyc
+
+solve.pyc
