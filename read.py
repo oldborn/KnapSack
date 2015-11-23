@@ -5,6 +5,8 @@ def read_problem(file_name):
     tokens = lines[0].split()
     n_items = int(tokens[0])
     capacity = int(tokens[1])
+    file = open("reportfile",'w')
+    file.write(""+n_items.__str__()+" "+capacity.__str__())
 
     # collect the values and weights of each item
     items = []
@@ -18,4 +20,7 @@ def read_problem(file_name):
     # or:
     # n_items, capacity = map(int, lines[0].split())
     # print(items)
+    # print capacity and n to file
+
+
     return (capacity, items)
